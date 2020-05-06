@@ -1,6 +1,8 @@
 
-// translationXBy
+// translation
 
+
+//MainActivity.java
 
  package com.example.anim3;
 
@@ -17,9 +19,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
             ImageView bart = (ImageView)findViewById(R.id.bart);
-            bart.animate().translationXBy(-180f).setDuration(2000);
-
             bart.animate().translationXBy(180f).setDuration(2000);
-
+            
     }
 }
+
+// activity_main.xml 
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<!--bart-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bart"
+        android:src="@drawable/bart"
+        />
+
+    <!--homer-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/homer"
+        android:src="@drawable/homer"
+        />
+
+
+</LinearLayout>
