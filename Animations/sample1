@@ -1,0 +1,75 @@
+
+package com.example.anim3;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
+    public void next(View view)
+    {
+
+        ImageView homer = (ImageView) findViewById(R.id.homer);
+        homer.animate().translationXBy(1000f).setDuration(800);
+
+        ImageView bart = (ImageView) findViewById(R.id.bart);
+        bart.animate().translationYBy(1000f).setDuration(800);
+
+    }
+
+    public void previve(View view) {
+        ImageView homer = (ImageView) findViewById(R.id.homer);
+        homer.animate().translationXBy(-1000f).setDuration(800);
+
+        ImageView bart = (ImageView) findViewById(R.id.bart);
+        bart.animate().translationYBy(-1000f).setDuration(800);
+    }
+
+}
+
+
+....................................................................................
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:onClick="previve"
+    android:orientation="vertical">
+
+
+    <!--homer-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/homer"
+        android:alpha="1"
+        android:src="@drawable/homer"
+        />
+
+
+    <!--bart-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bart"
+        android:src="@drawable/bart"
+        android:onClick="next"
+        android:alpha=".1"
+        />
+
+
+</RelativeLayout>
