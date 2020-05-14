@@ -1,0 +1,62 @@
+package com.example.listview;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    ListView listview;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listview = findViewById(R.id.listview);
+
+        ArrayList<String> arrayList = new ArrayList<String>();
+
+        arrayList.add("one");
+        arrayList.add("two");
+        arrayList.add("three");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+                (this,android.R.layout.simple_list_item_1,arrayList);
+
+        listview.setAdapter(arrayAdapter);
+
+    }
+}
+
+
+
+
+
+
+..............................................................................................................................
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".MainActivity">
+
+      <ListView
+          android:textAlignment="viewStart"
+          android:id="@+id/listview"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+
+  </LinearLayout>
