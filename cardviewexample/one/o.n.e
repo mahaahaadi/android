@@ -455,8 +455,8 @@ activity_main.xml
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-bg1.xml
+// in drable folder create bg1, bg2 and bg3.xml files
+drawable/bg1.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
@@ -470,7 +470,7 @@ bg1.xml
 //////////////////////
 
 
-bg2.xml
+drawable/bg2.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
@@ -485,7 +485,7 @@ bg2.xml
 
 
 
-bg3.xml
+drawable/bg3.xml
 
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -501,7 +501,7 @@ bg3.xml
 
 
 
-next.xml
+drawable/next.xml
 
 
 <vector android:height="55dp" android:tint="#FFFFFF"
@@ -513,7 +513,7 @@ next.xml
 //////////////
 
 
-c.xml
+drawable/c.xml
 
 <vector android:height="124dp" android:tint="#FFFFFF"
     android:viewportHeight="24" android:viewportWidth="24"
